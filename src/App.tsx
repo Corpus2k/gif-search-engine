@@ -1,3 +1,5 @@
+import { SearchController } from './components/SearchController';
+
 export const App = () => {
-	return <div>App</div>;
+	return <SearchController />;
 };
