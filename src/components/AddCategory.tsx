@@ -7,9 +7,8 @@ type AddCategoryProps = {
 
 export const AddCategory = ({ setCategory }: AddCategoryProps) => {
 	return (
-		<div>
-			<h1>Busca los mejores gif de este 2025😎</h1>
-			<FormGif setCategory={setCategory}/>
-		</div>
+		<>
+			<FormGif setCategory={setCategory} />
+		</>
 	);
 };

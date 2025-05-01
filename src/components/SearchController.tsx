@@ -3,7 +3,7 @@ import { AddCategory } from './AddCategory';
 import { DisplayGif } from './DisplayGif';
 import { useApi } from '../hooks/useApi';
 import { URLAPIResponse } from '../types/TypeGifs';
-
+import { Header } from './Header';
 export const SearchController = () => {
 	const [category, setCategory] = useState<string>('');
 
@@ -13,11 +13,9 @@ export const SearchController = () => {
 
 	const { data, error, loading } = useApi<URLAPIResponse>(URL_API);
 
-	console.log('data', data);
-	console.log('error', error);
-	console.log('loading', loading);
 	return (
 		<>
+			<Header />
 			<AddCategory setCategory={setCategory} />
 			<DisplayGif />
 		</>
