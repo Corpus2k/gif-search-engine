@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AddCategory } from './AddCategory';
 import { DisplayGif } from './DisplayGif';
 import { useApi } from '../hooks/useApi';
@@ -11,6 +11,9 @@ export const SearchController = () => {
 	const [category, setCategory] = useState<string>('XD');
 	const [countPage, setCountPage] = useState<number>(1);
 
+	useEffect(() => {
+		setCountPage(1);
+	}, [category]);
 	const API_KEY = `ZIQOXTdWyJZzuqI65OTDbMVZQt9jqUHM`;
 	const LIMIT = 10;
 
@@ -21,6 +24,7 @@ export const SearchController = () => {
 		countPage
 	);
 	const totalPage = data ? Math.ceil(data.pagination.total_count / LIMIT) : 0;
+
 	return (
 		<>
 			<Header />
