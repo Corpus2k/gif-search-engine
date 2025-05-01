@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-type ApiError = {
+export type ApiError = {
 	error: boolean;
 	status: number | null;
 	statusText: string;
