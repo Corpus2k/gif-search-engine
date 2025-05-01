@@ -14,6 +14,8 @@ export const SearchController = () => {
 	const { data, error, loading } = useApi<URLAPIResponse>(URL_API);
 
 	console.log(data);
+	console.log(error);
+	console.log(loading);
 
 	return (
 		<>
