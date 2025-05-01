@@ -1,3 +1,3 @@
 export const DisplayGif = () => {
-	return <div>DisplayGif</div>;
+	return <main>DisplayGif</main>;
 };
