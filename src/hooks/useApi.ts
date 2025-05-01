@@ -16,10 +16,10 @@ export const useApi = <T>(URL_API: string) => {
 	});
 
 	useEffect(() => {
+		const controller = new AbortController();
+		const signal = controller.signal;
 		setLoading(true);
 		const getData = async () => {
-			const controller = new AbortController();
-			const signal = controller.signal;
 			try {
 				const res = await fetch(URL_API, { signal });
 
@@ -65,16 +65,15 @@ export const useApi = <T>(URL_API: string) => {
 						statusText: 'Error desconocido :(',
 					});
 				}
-
-				return () => {
-					controller.abort();
-				};
 			} finally {
 				setLoading(false);
 			}
 		};
 
 		getData();
+		return () => {
+			controller.abort();
+		};
 	}, [URL_API]);
 
 	return {
