@@ -5,9 +5,10 @@ import { useApi } from '../hooks/useApi';
 import { URLAPIResponse } from '../types/TypeGifs';
 import { Header } from './Header';
 import { Pagination } from './Pagination';
+import { Footer } from './Footer';
 
 export const SearchController = () => {
-	const [category, setCategory] = useState<string>('');
+	const [category, setCategory] = useState<string>('XD');
 	const [countPage, setCountPage] = useState<number>(1);
 
 	const API_KEY = `ZIQOXTdWyJZzuqI65OTDbMVZQt9jqUHM`;
@@ -19,7 +20,6 @@ export const SearchController = () => {
 		LIMIT,
 		countPage
 	);
-	console.log(data);
 	const totalPage = data ? Math.ceil(data.pagination.total_count / LIMIT) : 0;
 	return (
 		<>
@@ -31,6 +31,7 @@ export const SearchController = () => {
 				totalPage={totalPage}
 				countPage={countPage}
 			/>
+			<Footer />
 		</>
 	);
 };

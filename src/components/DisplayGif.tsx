@@ -15,7 +15,7 @@ export const DisplayGif = ({ data, error, loading }: DisplayGifProps) => {
 		<>
 			{error.error && <DisplayError error={error} />}
 			{loading && <SpinnerLoading />}
-			<main className="py-6">
+			<main className="my-6">
 				<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 					{data &&
 						data.data.map((gif) => {

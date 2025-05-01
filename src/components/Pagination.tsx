@@ -25,7 +25,7 @@ export const Pagination = ({
 		}
 	};
 	return (
-		<nav className="flex justify-center items-center">
+		<nav className="flex justify-center items-center my-6">
 			<button
 				onClick={_handlePagePrev}
 				disabled={countPage === 1}
@@ -33,7 +33,7 @@ export const Pagination = ({
 					countPage === 1 ? 'disabled:cursor-not-allowed' : ''
 				}`}
 			>
-				Retroceder
+				Anterior
 			</button>
 			<span className="text-center mx-5">
 				Pagína {countPage} de {totalPage}

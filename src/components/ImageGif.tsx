@@ -13,6 +13,7 @@ export const ImageGif = ({ title, image }: ImageGifProps) => {
 					src={image.url}
 					alt={title || 'SIN TITULO XD'}
 					className="w-full max-h-50 object-cover"
+					title={title || 'SIN TITULO XD'}
 				/>
 			</figure>
 		</li>
