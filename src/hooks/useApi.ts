@@ -6,7 +6,7 @@ export type ApiError = {
 	statusText: string;
 };
 
-export const useApi = <T>(URL_API: string) => {
+export const useApi = <T>(URL_API: string,LIMIT:number,countPage:number) => {
 	const [data, setData] = useState<T | null>(null);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState<ApiError>({
@@ -21,7 +21,9 @@ export const useApi = <T>(URL_API: string) => {
 		setLoading(true);
 		const getData = async () => {
 			try {
-				const res = await fetch(URL_API, { signal });
+
+                const urlWithPagination = `${URL_API}&limit=${LIMIT}&offset=${(countPage-1)*LIMIT}`
+				const res = await fetch(urlWithPagination, { signal });
 
 				if (!res.ok) {
 					const dataError: ApiError = {
@@ -75,7 +77,7 @@ export const useApi = <T>(URL_API: string) => {
 		return () => {
 			controller.abort();
 		};
-	}, [URL_API]);
+	}, [URL_API,LIMIT,countPage]);
 
 	return {
 		data,
