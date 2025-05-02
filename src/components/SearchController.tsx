@@ -14,7 +14,7 @@ export const SearchController = () => {
 	useEffect(() => {
 		setCountPage(1);
 	}, [category]);
-	const API_KEY = `ZIQOXTdWyJZzuqI65OTDbMVZQt9jqUHM`;
+	const API_KEY = import.meta.env.VITE_GIPHY_API_KEY;
 	const LIMIT = 10;
 
 	const URL_API = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${category}`;
