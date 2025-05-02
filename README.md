@@ -35,9 +35,11 @@ La aplicación está desplegada en Vercel:
 ## 🖥 Cómo Ejecutarlo Localmente
 
 1. Clona el repositorio:
+
     ```bash
-    git clone https://github.com/tu-usuario/gif-search-engine.git
+    git clone https://github.com/Corpus2k/gif-search-engine.git
     ```
+
 2. Instala dependencias:
     ```bash
     npm install
