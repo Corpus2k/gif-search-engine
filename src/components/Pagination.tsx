@@ -25,23 +25,25 @@ export const Pagination = ({
 		}
 	};
 	return (
-		<nav className="flex justify-center items-center my-6">
+		<nav className="flex justify-center items-center flex-col sm:flex-row my-6 flex-wrap">
 			<button
 				onClick={_handlePagePrev}
 				disabled={countPage === 1}
-				className={`w-3xs outline outline-[var(--primary-color)] cursor-pointer hover:bg-[var(--primary-color)] hover:text-white p-2 text-lg rounded-sm ${
+				className={`w-min outline outline-[var(--primary-color)] cursor-pointer hover:bg-[var(--primary-color)] hover:text-white p-2 text-lg rounded-sm ${
 					countPage === 1 ? 'disabled:cursor-not-allowed' : ''
 				}`}
 			>
 				Anterior
 			</button>
-			<span className="text-center mx-5">
-				Pagína {countPage} de {totalPage}
-			</span>
+			<div className="p-3">
+				<span className="text-center ">
+					Pagína {countPage} de {totalPage}
+				</span>
+			</div>
 			<button
 				onClick={_handlePageNext}
 				disabled={countPage === totalPage}
-				className={`w-3xs outline outline-[var(--primary-color)] cursor-pointer hover:bg-[var(--primary-color)] hover:text-white p-2 text-lg  rounded-sm ${
+				className={`w-min outline outline-[var(--primary-color)] cursor-pointer hover:bg-[var(--primary-color)] hover:text-white p-2 text-lg  rounded-sm ${
 					countPage === totalPage ? 'disabled:cursor-not-allowed' : ''
 				}`}
 			>
