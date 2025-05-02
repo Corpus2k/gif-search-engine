@@ -16,7 +16,7 @@ export const FormGif = ({ setCategory }: FormGifProps) => {
 		>
 			<div>
 				<input
-					className="w-3xs outline  focus:outline-[var(--primary-color)] p-2 text-lg mr-8  rounded-sm"
+					className="w-full my-2 p-2 sm:w-md mr-4 outline  focus:outline-[var(--primary-color)] text-lg rounded-sm"
 					type="text"
 					placeholder="Busca aquí..."
 					onChange={_handleOnChange}
@@ -24,7 +24,7 @@ export const FormGif = ({ setCategory }: FormGifProps) => {
 				/>
 				<button
 					type="submit"
-					className="outline-none p-2 rounded-sm bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] cursor-pointer"
+					className="w-full my-2 p-2 sm:w-min outline-none rounded-sm bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] cursor-pointer"
 				>
 					Buscar
 				</button>

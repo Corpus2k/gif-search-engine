@@ -1,6 +1,6 @@
 export const Footer = () => {
 	return (
-		<footer className="w-full  bg-[var(--primary-color)] rounded-xl text-white  text-2xl  p-18">
+		<footer className="w-full  bg-[var(--primary-color)] rounded-xl text-white  text-sm  p-2">
 			<div className="my-4 flex justify-center flex-col items-center">
 				<div className="my-5">
 					<p>
@@ -8,7 +8,7 @@ export const Footer = () => {
 						<strong title="Carlos corpus">CARLOS CORPUS</strong> ©.
 					</p>
 
-					<div className="flex justify-center mx-4 gap-2">
+					<div className="flex justify-center m-4 gap-2 ">
 						<a
 							href="https://github.com/Corpus2k"
 							target="_blank"
@@ -16,9 +16,9 @@ export const Footer = () => {
 							title="GitHub Carlos corpus"
 						>
 							<img
-								style={{ maxWidth: '42px' }}
+								className="w-12"
 								src="/github.svg"
-								alt=""
+								alt="GitHub Carlos corpus"
 							/>
 						</a>
 						<a
@@ -28,9 +28,9 @@ export const Footer = () => {
 							rel=" noopener noreferrer"
 						>
 							<img
-								style={{ maxWidth: '42px' }}
+								className="w-12"
 								src="/linkedin.svg"
-								alt=""
+								alt="Linkedin Carlos corpus"
 							/>
 						</a>
 					</div>
